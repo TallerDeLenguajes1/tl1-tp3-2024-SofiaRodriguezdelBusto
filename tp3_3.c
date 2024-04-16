@@ -8,7 +8,7 @@ int main()
     char *buff = (char *)malloc(sizeof(char)*100);
     for(int i = 0;i<5;i++)
     {
-        printf("Ingrese el nombre %d", i+1);
+        printf("Ingrese el nombre %d: ", i+1);
         gets(buff);
         nombres[i] =(char *) malloc((strlen(buff)+1)*sizeof(char));
         strcpy(nombres[i], buff);
