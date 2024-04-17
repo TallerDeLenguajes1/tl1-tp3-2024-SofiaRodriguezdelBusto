@@ -54,6 +54,10 @@ int main()
     printf("\nEl costo del producto seleccionado es: %.2f", costoProdu);
     for(int i = 0;i<cantClientes;i++)
     {
+        for(int j = 0;j<((clientes+i)->CantidadProductosAPedir);j++)
+        {
+            free(((clientes+i)->Productos+j)->TiposProducto);
+        }
         free((clientes+i)->Productos);
         free((clientes+i)->NombreCliente);
     }
